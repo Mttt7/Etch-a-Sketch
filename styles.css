@@ -68,21 +68,15 @@ img{
 }
 
 #drawing-space{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    row-gap: 0;
+    display:grid;
+    grid-template-columns: repeat(4,100px);
     
 }
 
 /* CELL */
 .cell{
     border: #C3073F solid 1px;
-    flex: 1 1 auto;
-    
-    
-    
+   
 }
 
 /* FOOTER */
