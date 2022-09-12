@@ -13,11 +13,6 @@ slider.oninput=function(){
     output.innerHTML=this.value
     drawGrid(this.value)
 }
-
-
-
-
-
 /* DELETING GRID */
 function deleteGrid(){
      let toDelete = document.querySelectorAll(".cell")
@@ -25,17 +20,12 @@ function deleteGrid(){
         BOX.removeChild(element)
      })
 }
-
 resetBtn.addEventListener('click', ()=>{
     deleteGrid()
     drawGrid(slider.value)
 })
-
-
-
 /* DRAWING GRID */
 function drawGrid(size){
-    
     const cell = document.createElement('div')
     cell.classList.add('cell')
     BOX.style.gridTemplateColumns=`repeat(${size},1fr)`
@@ -44,6 +34,21 @@ function drawGrid(size){
         BOX.appendChild(clonedCell)
        
     }
+    addListeners()
+}
+
+/* ----------------------------- */
+/* DRAWING ON THE BOARD */
+function addListeners(){
+    
+    let cells=document.querySelectorAll('.cell')
+    cells.forEach((cell)=>{
+    cell.addEventListener('mouseenter' ,function(){
+        cell.style.backgroundColor='black'
+        
+    })
+  
+})
 }
 
 
