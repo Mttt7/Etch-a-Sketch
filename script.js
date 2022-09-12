@@ -1,15 +1,21 @@
-
-const okBtn=document.querySelector('#ok-button')
 const BOX = document.querySelector("#drawing-space")
 const BOXsize = BOX.clientWidth
+const sizeOutcome = document.querySelector("#size-display")
+const slider = document.querySelector("#grid-size")
+let output = document.querySelector("#size-display")
+const resetBtn=document.querySelector("#reset-button")
 
-
-
-okBtn.addEventListener('click',()=>{
+/* DISPLAYING SIZE */
+output.innerHTML=slider.value
+drawGrid(slider.value)
+slider.oninput=function(){
     deleteGrid()
-    const size=document.querySelector("#grid-size").value
-    drawGrid(size)
-})
+    output.innerHTML=this.value
+    drawGrid(this.value)
+}
+
+
+
 
 
 /* DELETING GRID */
@@ -20,6 +26,10 @@ function deleteGrid(){
      })
 }
 
+resetBtn.addEventListener('click', ()=>{
+    deleteGrid()
+    drawGrid(slider.value)
+})
 
 
 

@@ -14,15 +14,23 @@
 <body>
     <div id="header">
         <div class="tittle">SKETCHBOOK</div>
-        <div id="pen-icon"><div class="material-symbols-outlined">edit</div></div>
-    </div>
+        
+</div>
 
     <div class="main">
-        <div id="reset-button">RESET</div>
-        <div id="size-settings">
-            <div class="text">SIZE:</div>
-            <div id="size-input"><input id="grid-size" type="number" for="text" min="1" max="99"></div>
-            <div id="ok-button">OK</div>
+        <div class="settings">
+            <div class="centered">
+                <div id="reset-button">RESET</div>
+            </div>
+            <div id="size-settings">
+                <div id="size-wrapper">
+                <div class="text">SIZE:</div>
+                <div id="size-display"></div>
+                </div>
+                <div class="slidecontainer">
+                    <input id="grid-size" type="range" min="1" max="100" value="16" class="slider">
+                  </div>
+            </div>
         </div>
 
         <div id="drawing-space">
