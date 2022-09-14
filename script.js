@@ -14,6 +14,7 @@ rainbowWrapper.addEventListener('click',changeLetterColor)
 
 
 let mouseDown=false
+let touched = false
 BOX.addEventListener('mousedown',function(e){
     e.preventDefault()
     mouseDown=true
@@ -22,6 +23,17 @@ BOX.addEventListener('mouseup',function(e){
     e.preventDefault()
     mouseDown=false
 })
+
+/* MOBILE */
+BOX.addEventListener('touchstart',function(e){
+    console.log("tpuchstart")
+     touched = true
+})
+BOX.addEventListener('touchend',function(e){
+    console.log("touchend")
+    touched = false
+})
+
 
 /* DISPLAYING SIZE */
 output.innerHTML=slider.value
@@ -74,10 +86,24 @@ function addListeners(){
         if(currentMode==0) cell.style.backgroundColor=getCurrenColor()
         else if(currentMode==1) cell.style.backgroundColor=randomColor()
         
+    }
+
+
+    /* mobiles */
+    cell.addEventListener('touchstart',changeColorMobile)
+    cell.addEventListener('touchmove',changeColorMobile)
+    function changeColorMobile(e){
         
-        
+        if(e.type==='touchmove' && !touched){
+            
+            return
+        } 
+
+        if(currentMode==0) cell.style.backgroundColor=getCurrenColor()
+        else if(currentMode==1) cell.style.backgroundColor=randomColor()
         
     }
+
 })
 }
 
