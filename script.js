@@ -8,7 +8,7 @@ let output = document.querySelector("#size-display")
 const resetBtn=document.querySelector("#reset-button")
 const rainbowLetters=document.querySelectorAll('.rainbow-letter')
 const rainbowWrapper=document.querySelector("#rainbow-mode")
-
+const colorPicker = document.querySelector("#color-chooser")
 rainbowWrapper.addEventListener('click',changeLetterColor)
 
 
@@ -71,7 +71,7 @@ function addListeners(){
             
             return
         } 
-        if(currentMode==0) cell.style.backgroundColor='black'
+        if(currentMode==0) cell.style.backgroundColor=getCurrenColor()
         else if(currentMode==1) cell.style.backgroundColor=randomColor()
         
         
@@ -116,4 +116,9 @@ function rgb(r,g,b){
     return `rgb(${Math.floor(r)},${Math.floor(g)},${Math.floor(b)})`
 }
 
- 
+/* COLOR */
+function getCurrenColor(){
+    return colorPicker.value
+   
+}
+
