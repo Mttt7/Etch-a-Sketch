@@ -80,7 +80,7 @@ body{
   width: 60px; 
   height: 60px; 
   border-radius: 30px;
-  background: #04AA6D; 
+  background:  #F92C85;
   cursor: pointer; 
 }
 
@@ -100,6 +100,14 @@ body{
     display:grid;
     grid-template-columns: repeat(4,100px);
     
+}
+
+
+/* RAINBOW MODE */
+#rainbow-mode{
+    display: flex;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 60px;
 }
 
 
