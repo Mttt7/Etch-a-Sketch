@@ -155,13 +155,20 @@ body{
     #footer{
         font-family: 'Shadows Into Light', cursive;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         background-color: #F92C85;
         margin-top: auto;
+        gap:15px;
+        padding: 5px;
     }
     #footer .text{
         font-size: 30px;
+    }
+    #footer>a>img{
+        height: 30px;
+        width: auto;
+        padding-bottom: 3px;
     }
 
 
