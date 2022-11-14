@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #FDF5DF
+    
 }
 #header .tittle{
     color: #5EBEC4;
@@ -55,7 +56,7 @@ body{
 .settings{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 100%;
 }
 .centered-vertically{
     display: flex;
@@ -74,7 +75,7 @@ body{
 .slider{ 
     -webkit-appearance: none;
     height: 60px;
-    width: 100%;
+    width: 600px;
     border-radius: 40px;
 }
 .slider::-webkit-slider-thumb {
@@ -171,6 +172,8 @@ body{
         padding-bottom: 3px;
     }
 
+    
+
 
 
     /* ICONS */
@@ -196,7 +199,25 @@ body{
         flex-direction: column;
     }
 
+    #header .tittle {
+        font-size: 4rem;
+    }
+    #reset-button{
+        font-size: 3.5rem;
+    }
+    #rainbow-mode{
+        font-size: 3.5rem;
+    }
 
+    .slider{ 
+
+        -webkit-appearance: none;
+        height: 40px;
+        width: 100%;
+        border-radius: 40px;
+    }
+
+   
 
 }
 
